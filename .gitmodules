@@ -1,0 +1,24 @@
+[submodule "dependencies/amaranth"]
+	path = dependencies/amaranth
+	url = https://github.com/amaranth-lang/amaranth
+[submodule "dependencies/amaranth-boards"]
+	path = dependencies/amaranth-boards
+	url = https://github.com/amaranth-lang/amaranth-boards
+[submodule "dependencies/amaranth-stdio"]
+	path = dependencies/amaranth-stdio
+	url = https://github.com/amaranth-lang/amaranth-stdio
+[submodule "dependencies/luna"]
+	path = dependencies/luna
+	url = https://github.com/martinling/luna
+[submodule "dependencies/cynthion"]
+	path = dependencies/cynthion
+	url = https://github.com/martinling/cynthion
+[submodule "dependencies/apollo"]
+	path = dependencies/apollo
+	url = https://github.com/martinling/apollo
+[submodule "dependencies/python-usb-protocol"]
+	path = dependencies/python-usb-protocol
+	url = https://github.com/greatscottgadgets/python-usb-protocol
+[submodule "dependencies/packetry"]
+	path = dependencies/packetry
+	url = https://github.com/martinling/packetry
