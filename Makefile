@@ -23,6 +23,10 @@ update-analyzer: analyzer.bit
 	$(APOLLO) flash-erase
 	$(APOLLO) flash-program analyzer.bit
 
+.PHONY: update-packetry
+update-packetry:
+	cd dependencies/packetry; cargo build --release
+
 firmware: firmware.bin
 
 firmware.bin: $(FIRMWARE)
@@ -40,8 +44,7 @@ analyzer.bit: $(TIMESTAMP)
 packetry: $(PACKETRY)
 	cp $< $@
 
-$(PACKETRY):
-	cd dependencies/packetry; cargo build --release
+$(PACKETRY): update-packetry
 
 environment:
 	python -m venv environment
