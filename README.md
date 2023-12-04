@@ -17,11 +17,11 @@ To set up the environment and build everything:
 
 To update Apollo on an attached Cynthion:
 
-`make update-apollo`
+`make flash-apollo`
 
 To update analyzer gateware on an attached Cynthion:
 
-`make update-analyzer`
+`make flash-analyzer`
 
 To run Packetry:
 
