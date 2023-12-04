@@ -66,5 +66,6 @@ $(TIMESTAMP): environment
 	touch $(TIMESTAMP)
 
 clean:
+	rm -f firmware.bin analyzer.bit analyzer.deps packetry
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware clean
 	rm -rf environment
