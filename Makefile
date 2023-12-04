@@ -14,7 +14,7 @@ APOLLO=environment/bin/apollo
 
 all: analyzer firmware packetry
 
-.PHONY: update-firmware update-apollo update-analyzer update-packetry
+.PHONY: all clean analyzer firmware update-firmware update-apollo update-analyzer update-packetry
 
 update-firmware:
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
