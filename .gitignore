@@ -1,4 +1,5 @@
 environment
 firmware.bin
 analyzer.bit
+analyzer.deps
 packetry

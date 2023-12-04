@@ -41,7 +41,8 @@ $(FIRMWARE): update-firmware
 
 analyzer: analyzer.bit
 
-analyzer.bit: $(TIMESTAMP)
+analyzer.bit: $(TIMESTAMP) $(file < analyzer.deps)
+	$(ENV_PYTHON) find-python-dependencies.py $(ANALYZER) > analyzer.deps
 	LUNA_PLATFORM=$(PLATFORM) $(ENV_PYTHON) -m $(ANALYZER) -o $@
 
 packetry: $(PACKETRY)
