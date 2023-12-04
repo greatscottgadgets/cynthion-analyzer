@@ -52,13 +52,13 @@ environment:
 	python -m venv environment
 
 $(TIMESTAMP): environment
-	$(ENV_INSTALL) dependencies/amaranth
-	$(ENV_INSTALL) dependencies/amaranth-boards
-	$(ENV_INSTALL) dependencies/amaranth-stdio
-	$(ENV_INSTALL) dependencies/apollo
-	$(ENV_INSTALL) dependencies/python-usb-protocol
-	$(ENV_INSTALL) --no-deps dependencies/luna
-	$(ENV_INSTALL) dependencies/cynthion/cynthion/python
+	$(ENV_INSTALL) -e dependencies/amaranth
+	$(ENV_INSTALL) -e dependencies/amaranth-boards
+	$(ENV_INSTALL) -e dependencies/amaranth-stdio
+	$(ENV_INSTALL) -e dependencies/apollo
+	$(ENV_INSTALL) -e dependencies/python-usb-protocol
+	$(ENV_INSTALL) --no-deps -e dependencies/luna
+	$(ENV_INSTALL) -e dependencies/cynthion/cynthion/python
 	$(ENV_INSTALL) libusb1==1.9.2
 	rm -rf dependencies/amaranth-stdio/build
 	touch $(TIMESTAMP)
