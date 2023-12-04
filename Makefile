@@ -14,6 +14,8 @@ APOLLO=environment/bin/apollo
 
 all: analyzer firmware packetry
 
+.PHONY: update-firmware update-apollo update-analyzer update-packetry
+
 update-firmware:
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware
@@ -27,7 +29,6 @@ update-analyzer: analyzer.bit
 	$(APOLLO) flash-erase
 	$(APOLLO) flash-program analyzer.bit
 
-.PHONY: update-packetry
 update-packetry:
 	cd dependencies/packetry; cargo build --release
 
