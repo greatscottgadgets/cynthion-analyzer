@@ -14,6 +14,10 @@ APOLLO=environment/bin/apollo
 
 all: analyzer firmware packetry
 
+update-firmware:
+	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
+	$(APOLLO_VARS) make -C dependencies/apollo/firmware
+
 update-apollo: firmware.bin
 	dfu-util -d 1d50:615c --detach
 	sleep 1
@@ -32,9 +36,7 @@ firmware: firmware.bin
 firmware.bin: $(FIRMWARE)
 	cp $< $@
 
-$(FIRMWARE):
-	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
-	$(APOLLO_VARS) make -C dependencies/apollo/firmware
+$(FIRMWARE): update-firmware
 
 analyzer: analyzer.bit
 
