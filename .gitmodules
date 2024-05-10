@@ -9,16 +9,16 @@
 	url = https://github.com/amaranth-lang/amaranth-stdio
 [submodule "dependencies/luna"]
 	path = dependencies/luna
-	url = https://github.com/martinling/luna
+	url = https://github.com/greatscottgadgets/luna
 [submodule "dependencies/cynthion"]
 	path = dependencies/cynthion
-	url = https://github.com/martinling/cynthion
+	url = https://github.com/greatscottgadgets/cynthion
 [submodule "dependencies/apollo"]
 	path = dependencies/apollo
-	url = https://github.com/martinling/apollo
+	url = https://github.com/greatscottgadgets/apollo
 [submodule "dependencies/python-usb-protocol"]
 	path = dependencies/python-usb-protocol
 	url = https://github.com/greatscottgadgets/python-usb-protocol
 [submodule "dependencies/packetry"]
 	path = dependencies/packetry
-	url = https://github.com/martinling/packetry
+	url = https://github.com/greatscottgadgets/packetry
