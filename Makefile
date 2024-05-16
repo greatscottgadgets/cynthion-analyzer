@@ -59,9 +59,10 @@ $(TIMESTAMP): environment
 	$(ENV_INSTALL) -e dependencies/amaranth-stdio
 	$(ENV_INSTALL) -e dependencies/apollo
 	$(ENV_INSTALL) -e dependencies/python-usb-protocol
+	$(ENV_INSTALL) libusb1 pyserial
 	$(ENV_INSTALL) --no-deps -e dependencies/luna
-	$(ENV_INSTALL) -e dependencies/cynthion/cynthion/python
-	$(ENV_INSTALL) libusb1==1.9.2
+	$(ENV_INSTALL) pygreat tomli
+	$(ENV_INSTALL) --no-deps -e dependencies/cynthion/cynthion/python
 	rm -rf dependencies/amaranth-stdio/build
 	touch $(TIMESTAMP)
 
