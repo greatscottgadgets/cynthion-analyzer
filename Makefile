@@ -16,6 +16,9 @@ all: analyzer firmware packetry
 
 .PHONY: all clean analyzer firmware update-firmware update-packetry flash-apollo flash-analyzer
 
+test:
+	cd dependencies/packetry; cargo test --features=test-cynthion --test=test_cynthion
+
 update-firmware:
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware
