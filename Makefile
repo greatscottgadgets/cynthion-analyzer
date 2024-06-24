@@ -17,6 +17,7 @@ all: analyzer firmware packetry
 .PHONY: all clean analyzer firmware update-firmware update-packetry flash-apollo flash-analyzer
 
 test: packetry
+	$(ENV_PYTHON) -m cynthion.gateware.analyzer.analyzer
 	cd dependencies/packetry; cargo test --release
 	./packetry --test-cynthion
 
