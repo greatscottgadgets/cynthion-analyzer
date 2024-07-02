@@ -19,7 +19,7 @@ all: analyzer firmware packetry
 test: packetry
 	$(ENV_PYTHON) -m cynthion.gateware.analyzer.analyzer
 	cd dependencies/packetry; cargo test --release
-	./packetry --test-cynthion
+	./packetry --test-cynthion --save-captures
 
 update-firmware:
 	$(APOLLO_VARS) make -C dependencies/apollo/firmware get-deps
