@@ -16,8 +16,9 @@ all: analyzer firmware packetry
 
 .PHONY: all clean analyzer firmware update-firmware update-packetry flash-apollo flash-analyzer
 
-test: packetry
+test: packetry analyzer.bit
 	$(ENV_PYTHON) -m cynthion.gateware.analyzer.analyzer
+	$(APOLLO) configure analyzer.bit
 	cd dependencies/packetry; cargo test --release
 	./packetry --test-cynthion
 
@@ -31,7 +32,7 @@ flash-apollo: firmware.bin
 	dfu-util -d 1d50:615c --download firmware.bin
 
 flash-analyzer: analyzer.bit
-	$(APOLLO) flash --fast analyzer.bit
+	$(APOLLO) flash-program --fast analyzer.bit
 
 update-packetry:
 	cd dependencies/packetry; cargo build --release
