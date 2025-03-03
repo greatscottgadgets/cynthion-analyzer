@@ -1,12 +1,3 @@
-[submodule "dependencies/amaranth"]
-	path = dependencies/amaranth
-	url = https://github.com/amaranth-lang/amaranth
-[submodule "dependencies/amaranth-boards"]
-	path = dependencies/amaranth-boards
-	url = https://github.com/amaranth-lang/amaranth-boards
-[submodule "dependencies/amaranth-stdio"]
-	path = dependencies/amaranth-stdio
-	url = https://github.com/amaranth-lang/amaranth-stdio
 [submodule "dependencies/luna"]
 	path = dependencies/luna
 	url = https://github.com/greatscottgadgets/luna
