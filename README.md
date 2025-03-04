@@ -4,7 +4,6 @@ This repository is for developing the USB analyzer mode of [Cynthion](https://gr
 
 It includes several other projects as submodules to aid with making changes across all of them:
 - [Apollo](https://github.com/greatscottgadgets/apollo)
-- [Amaranth](https://github.com/amaranth-lang/amaranth) (plus `-boards` and `-stdio`)
 - [LUNA](https://github.com/greatscottgadgets/luna)
 - [Cynthion](https://github.com/greatscottgadgets/luna)
 - [Packetry](https://github.com/greatscottgadgets/packetry)
